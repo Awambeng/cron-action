@@ -1,0 +1,16 @@
+name: test cron job
+
+on:
+  schedule:
+    - cron: "*/1 * * * *"
+
+jobs:
+  test-cron:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: this is a cron job
+        run: echo "this is a cron job"
